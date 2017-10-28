@@ -30,8 +30,8 @@ int main() {
 
     int strLen = strlen(inputedString);
     for (int i = 0; i < strLen; i++){
-        for (int j = 0; j < SIZE_OF_ALPHABET; j++){
-            if (toupper(inputedString[i]) >= 'A' && toupper(inputedString[i])<='Z'){
+   for (int j = 0; j < SIZE_OF_ALPHABET; j++){
+            if (toupper(inputedString[i]) >= 'A' && toupper(inputedString[i]) <= 'Z'){
             
                 isItSymbol = STATE_FALSE;
                 isItLetter = STATE_TRUE;
@@ -40,7 +40,7 @@ int main() {
             else{
                 isItSymbol = STATE_TRUE;
             }
-        }
+       }
         
         if ((isItSymbol == STATE_TRUE) || (i == strlen(inputedString)-1)) {
             if (isItLetter == STATE_TRUE){
