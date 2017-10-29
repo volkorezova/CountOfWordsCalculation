@@ -27,12 +27,12 @@ int main() {
     printf("Pls enter any string. We will calculate count of words:\n");
     gets(inputedString);
     fpurge(stdin);
-
+    
     int strLen = strlen(inputedString);
     for (int i = 0; i < strLen; i++){
-   for (int j = 0; j < SIZE_OF_ALPHABET; j++){
+        for (int j = 0; j < SIZE_OF_ALPHABET; j++){
             if (toupper(inputedString[i]) >= 'A' && toupper(inputedString[i]) <= 'Z'){
-            
+                
                 isItSymbol = STATE_FALSE;
                 isItLetter = STATE_TRUE;
                 break;
@@ -40,9 +40,9 @@ int main() {
             else{
                 isItSymbol = STATE_TRUE;
             }
-       }
+        }
         
-        if ((isItSymbol == STATE_TRUE) || (i == strlen(inputedString)-1)) {
+        if ((isItSymbol == STATE_TRUE) || (i == strLen-1)) {
             if (isItLetter == STATE_TRUE){
                 wordsCounter++;
                 isItLetter = STATE_FALSE;
